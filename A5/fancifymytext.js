@@ -17,14 +17,14 @@ function removeStyle(){
     textA.style.textDecoration = "";
 }
 
-function Moo(){
+function moo(){
     const textA = document.getElementById("textInput");
-    const Utext = textA.nodeValue.toUpperCase();
-    textA.nodeValue = Utext;
-    let string = textA.nodeValue;
+    const Utext = textA.value.toUpperCase();
+    textA.value = Utext;
+    let string = textA.value;
     let sentences = string.split(".");
     string = sentences.join("-MOO.");
-    textA.nodeValue = string;
+    textA.value = string;
 }
 
 const biggerBtn = document.getElementById("biggerButton");
@@ -35,4 +35,4 @@ const mooBtn = document.getElementById("moo");
 biggerBtn.addEventListener("click", changeFSize);
 fancyRadioBtn.addEventListener("click", addStyle);
 boringRadioBtn.addEventListener("click", removeStyle);
-mooBtn.addEventListener("click", Moo);
+mooBtn.addEventListener("click", moo);
